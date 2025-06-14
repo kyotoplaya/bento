@@ -4,91 +4,252 @@
 // ╚═╝╚═╝╝╚╝ ╩ ╚═╝ 
 */
 
-[остальные стили оставляем без изменений до секции .buttonsContainer]
+/* V A R I A B L E S */
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700&display=swap');
 
-/* Изменения начинаются здесь */
-.buttonsContainer {
-  width: 100%;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
-  justify-content: center;
-  gap: 30px;
-  padding: 20px;
-  max-width: 800px; /* Ограничиваем максимальную ширину */
-  margin: 0 auto; /* Центрируем контейнер */
+:root {
+  /* Font Size */
+  --fg-primary: 12vh;
+  --fg-secondary: 3vh;
+  --fg-date: 8vh;
+  --fg-list: 2vh;
+  --icon: 3vh;
+
+  /* Fonts Color */
+  --fg: #3a3a3a;
+  --sfg: #494949;
+
+  /* Light Colors */
+  --accent: #57a0d9;
+  --background: #f5f5f5;
+  --cards: #e4e6e6;
+
+  /* Image background */
+  --imgbg: url(assets/background.jpg);
+  --imgcol: linear-gradient(
+    rgba(255, 255, 255, 0.7),
+    rgba(255, 255, 255, 0.7)
+  );
 }
 
-.button {
+.darktheme {
+  /* Dark Colors */
+  --accent: #57a0d9;
+  --background: #19171a;
+  --cards: #201e21;
+
+  /* Fonts Color */
+  --fg: #d8dee9;
+  --sfg: #2c292e;
+
+  /* Image background */
+  --imgcol: linear-gradient(
+    rgba(0, 0, 0, 0.85),
+    rgba(0, 0, 0, 0.85)
+  );
+}
+
+/* S T Y L E S */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Open Sans', sans-serif;
+  transition: 0.2s ease-in-out;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  background-color: var(--background);
   display: flex;
-  justify-content: center;
   align-items: center;
-  min-height: 80px; /* Фиксированная высота */
-  padding: 15px;
+  justify-content: center;
+}
+
+.notransition {
+  -webkit-transition: none;
+  -moz-transition: none;
+  -o-transition: none;
+  transition: none;
+}
+
+.withImageBackground {
+  background-image: var(--imgcol), var(--imgbg);
+  background-size: cover;
+}
+
+#themeButton {
+  position: absolute;
+  margin: 2em 2em 0 0;
+  right: 0;
+  top: 0;
+  color: var(--fg);
+  border: none;
+  cursor: pointer;
+  background-color: #00000000;
+}
+
+#themeIcon {
+  width: 25px;
+  height: 25px;
+}
+
+.container {
+  width: 145vh;
+  height: 85vh;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(4, 1fr);
+  grid-gap: 30px;
+  padding: 20px;
+}
+
+.card {
   background-color: var(--cards);
+  box-shadow: 0 5px 7px rgba(0, 0, 0, 0.35);
   border-radius: 5px;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
 
-.buttonIcon {
-  width: 40px; /* Увеличиваем размер иконок */
-  height: 40px;
+.card:hover {
+  transform: translateY(-0.2rem);
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.35);
+}
+
+.timeBlock {
+  grid-row: 1 / span 2;
+  grid-column: 1 / span 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.weatherBlock {
+  grid-column: 3 / span 2;
+  grid-row: 1 / span 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.date {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 30px;
+}
+
+.weather {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.clock {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#hour,
+#separator,
+#minutes {
+  font-size: var(--fg-primary);
+  font-weight: bolder;
   color: var(--fg);
 }
 
-/* Увеличиваем область наведения */
-.button:hover {
-  transform: scale(1.05);
-  background-color: var(--accent);
+#month,
+#day {
+  font-size: var(--fg-date);
+  font-weight: bold;
+  color: var(--fg);
 }
 
-/* Адаптация для мобильных */
-@media only screen and (max-width: 68.75em) {
-  .buttonsContainer {
-    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
-    padding: 15px;
-    gap: 20px;
-  }
-  
-  .button {
-    min-height: 70px;
-  }
-  
-  .buttonIcon {
-    width: 35px;
-    height: 35px;
-  }
+#day {
+  margin-left: 1.5rem;
 }
 
-[остальные стили оставляем без изменений]
+#greetings {
+  font-size: var(--fg-secondary);
+  color: var(--fg);
+}
 
-.buttonsContainer {
-  width: auto;
-  display: grid;
-  grid-template-columns: repeat(3, auto);
+.weatherIcon img {
+  width: 70px;
+  height: 70px;
+}
+
+.weatherValue p {
+  font-size: var(--fg-secondary);
+  font-weight: bolder;
+  margin-left: 15px;
+  color: var(--fg);
+}
+
+.weatherDescription p {
+  font-size: var(--fg-secondary);
+  margin-left: 15px;
+  color: var(--fg);
+}
+
+.reduceGap {
+  grid-gap: 2rem !important;
+}
+
+.removeGap {
+  grid-gap: 0 !important;
+}
+
+.linksBlock {
+  grid-row: 3 / span 2;
+  grid-column: 1 / span 4;
+  display: flex;
   justify-content: center;
-  gap: 30px;
+}
+
+/* НОВЫЕ СТИЛИ ДЛЯ КНОПОК */
+.buttonsContainer {
+  width: 100%;
+  max-width: 900px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  justify-items: center;
+  gap: 25px;
   padding: 20px;
+  margin: 0 auto;
 }
 
 .button {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 100%;
-  min-width: 100px;
-}
-
-.buttonIcon {
-  width: var(--icon);
-  height: var(--icon);
-  color: var(--fg);
+  width: 150px;
+  height: 100px;
+  background-color: var(--cards);
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
 }
 
 .button:hover {
+  transform: translateY(-5px);
   background-color: var(--accent);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
 }
-.button:hover svg {
-  stroke: var(--sfg);
+
+.buttonIcon {
+  width: 40px;
+  height: 40px;
+  margin-bottom: 10px;
+  color: var(--fg);
+}
+
+.button:hover .buttonIcon {
+  color: var(--sfg);
 }
 
 .listsContainer {
@@ -139,7 +300,6 @@
 }
 
 /* M E D I A - Q U E R I E S */
-
 @media only screen and (max-width: 68.75em) {
   .container {
     grid-gap: 20px;
@@ -165,7 +325,30 @@
   }
 
   .buttonsContainer {
-    grid-template-columns: repeat(2, auto);
-    padding: 20px 100px;
+    grid-template-columns: repeat(2, minmax(120px, 1fr));
+    padding: 15px;
+    gap: 20px;
+  }
+
+  .button {
+    width: 120px;
+    height: 90px;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .buttonsContainer {
+    grid-template-columns: repeat(2, minmax(100px, 1fr));
+    gap: 15px;
+  }
+
+  .button {
+    width: 100px;
+    height: 80px;
+  }
+
+  .buttonIcon {
+    width: 30px;
+    height: 30px;
   }
 }
