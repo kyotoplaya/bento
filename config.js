@@ -62,7 +62,7 @@ const CONFIG = {
 		{
 			id: '4',
 			name: 'Sheets',
-			icon: 'file-text',
+			icon: 'table',
 			link: 'https://docs.google.com/spreadsheets/u/0/',
 		},
 		{
@@ -74,7 +74,7 @@ const CONFIG = {
 		{
 			id: '6',
 			name: 'Faceit',
-			icon: 'award',
+			icon: 'smile',
 			link: 'https://www.faceit.com/ru/home/',
 		},
 	],
