@@ -361,3 +361,16 @@ body {
     padding-right: 100px;
   }
 }
+
+/* Центрирование КОНТЕЙНЕРА кнопок */
+.firstButtonsContainer {
+    display: flex !important;
+    justify-content: center !important;
+    margin: 0 auto !important;
+    padding-left: 0 !important; /* Убирает стандартный отступ */
+}
+
+/* Центрирование САМИХ КНОПОК (если нужно) */
+.bento-button {
+    margin: 0 8px !important; /* Расстояние между кнопками */
+}
