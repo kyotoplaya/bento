@@ -59,8 +59,8 @@ const CONFIG = {
 		},
 		{
 			id: '2',
-			name: 'VK,
-			icon: 'trash',
+			name: 'VK',
+			icon: 'message-square',
 			link: 'https://vk.com/',
 		},
 		{
@@ -72,7 +72,7 @@ const CONFIG = {
 		{
 			id: '4',
 			name: 'Sheets',
-			icon: 'table',
+			icon: 'file-text',
 			link: 'https://docs.google.com/spreadsheets/u/0/',
 		},
 		{
@@ -84,48 +84,48 @@ const CONFIG = {
 		{
 			id: '6',
 			name: 'Faceit',
-			icon: 'server',
+			icon: 'award',
 			link: 'https://www.faceit.com/ru/home/',
 		},
 	],
 
-	// secondButtonsContainer: [
-	// 	{
-	// 		id: '1',
-	// 		name: 'Music',
-	// 		icon: 'headphones',
-	// 		link: 'https://open.spotify.com',
-	// 	},
-	// 	{
-	// 		id: '2',
-	// 		name: 'twitter',
-	// 		icon: 'twitter',
-	// 		link: 'https://twitter.com/',
-	// 	},
-	// 	{
-	// 		id: '3',
-	// 		name: 'bot',
-	// 		icon: 'bot',
-	// 		link: 'https://discord.com/app',
-	// 	},
-	// 	{
-	// 		id: '4',
-	// 		name: 'Amazon',
-	// 		icon: 'shopping-bag',
-	// 		link: 'https://amazon.com/',
-	// 	},
-	// 	{
-	// 		id: '5',
-	// 		name: 'Hashnode',
-	// 		icon: 'pen-tool',
-	// 		link: 'https://hashnode.com/',
-	// 	},
-	// 	{
-	// 		id: '6',
-	// 		name: 'Figma',
-	// 		icon: 'figma',
-	// 		link: 'https://figma.com/',
-	// 	},
+	secondButtonsContainer: [
+		{
+			id: '1',
+			name: 'Music',
+			icon: 'headphones',
+			link: 'https://open.spotify.com',
+		},
+		{
+			id: '2',
+			name: 'Twitter',
+			icon: 'twitter',
+			link: 'https://twitter.com/',
+		},
+		{
+			id: '3',
+			name: 'Discord',
+			icon: 'message-circle',
+			link: 'https://discord.com/app',
+		},
+		{
+			id: '4',
+			name: 'Amazon',
+			icon: 'shopping-bag',
+			link: 'https://amazon.com/',
+		},
+		{
+			id: '5',
+			name: 'Hashnode',
+			icon: 'pen-tool',
+			link: 'https://hashnode.com/',
+		},
+		{
+			id: '6',
+			name: 'Figma',
+			icon: 'figma',
+			link: 'https://figma.com/',
+		},
 	],
 
 	// ┬  ┬┌─┐┌┬┐┌─┐
@@ -181,50 +181,50 @@ const CONFIG = {
 	],
 
 	// Second Links Container
-	// secondListsContainer: [
-		// {
-		// 	icon: 'binary',
-		// 	id: '1',
-		// 	links: [
-		// 		{
-		// 			name: 'Spotify',
-		// 			link: 'https://www.spotify.com',
-		// 		},
-		// 		{
-		// 			name: 'Reddit',
-		// 			link: 'https://www.reddit.com',
-		// 		},
-		// 		{
-		// 			name: 'Hashnode',
-		// 			link: 'https://www.hashnode.com',
-		// 		},
-		// 		{
-		// 			name: 'Pocket',
-		// 			link: 'https://www.pocket.com',
-		// 		},
-		// 	],
-		// },
-		// {
-		// 	icon: 'github',
-		// 	id: '2',
-		// 	links: [
-		// 		{
-		// 			name: 'Front',
-		// 			link: 'https://www.reddit.com/r/Frontend/',
-		// 		},
-		// 		{
-		// 			name: 'Rust',
-		// 			link: 'https://www.reddit.com/r/rust/',
-		// 		},
-		// 		{
-		// 			name: 'Go',
-		// 			link: 'https://www.reddit.com/r/golang/',
-		// 		},
-		// 		{
-		// 			name: 'Repos',
-		// 			link: 'https://github.com/migueravila',
-		// 		},
-		// 	],
-		// },
-	// ],
+	secondListsContainer: [
+		{
+			icon: 'binary',
+			id: '1',
+			links: [
+				{
+					name: 'Spotify',
+					link: 'https://www.spotify.com',
+				},
+				{
+					name: 'Reddit',
+					link: 'https://www.reddit.com',
+				},
+				{
+					name: 'Hashnode',
+					link: 'https://www.hashnode.com',
+				},
+				{
+					name: 'Pocket',
+					link: 'https://www.pocket.com',
+				},
+			],
+		},
+		{
+			icon: 'github',
+			id: '2',
+			links: [
+				{
+					name: 'Front',
+					link: 'https://www.reddit.com/r/Frontend/',
+				},
+				{
+					name: 'Rust',
+					link: 'https://www.reddit.com/r/rust/',
+				},
+				{
+					name: 'Go',
+					link: 'https://www.reddit.com/r/golang/',
+				},
+				{
+					name: 'Repos',
+					link: 'https://github.com/migueravila',
+				},
+			],
+		},
+	],
 };
